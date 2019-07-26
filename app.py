@@ -25,7 +25,7 @@ app.secret_key=b'_5#y2L"F4Q8z\n\xec]/'
 # Hack to deal w/ relative references
 dir_path = os.path.dirname(os.path.realpath(__file__))
 abs_db_path = os.path.join(dir_path,"db", "dbfinal.sqlite3")
-app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get("postgres://ogrqooapdxwypq:5b3e0c375c8a5e488af1ceb652e6c69a5ebb3500e7c19a843f503d0aca5c896f@ec2-174-129-227-205.compute-1.amazonaws.com:5432/dfd0mo4pbi8e81", "") or f"sqlite:///{abs_db_path}"
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get("postgres:///INSERT LINK", "") or f"sqlite:///{abs_db_path}"
 
 db = SQLAlchemy(app)
 
